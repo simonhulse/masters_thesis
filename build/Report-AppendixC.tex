@@ -1,0 +1,190 @@
+% !TeX root = ./Report-Body.tex
+\chapter{I$_3$S Rate Expressions}
+\allowdisplaybreaks
+
+\begin{appendixtext}
+In this appendix, full expressions of the relaxation rates, $\Gamma_{2,\text{S}}^i$, where\\$i \in \{\alpha \alpha \alpha, \alpha \alpha\beta, \alpha\beta\beta, \beta\beta\beta\}$, for each model considered in Figure \ref{CH3Models}, are presented. Definitions of the dipolar and chemical shift interaction constants are given in \ref{DipConst} and \ref{CSAConst}. If not defined below, the spectral density functions of relevance are given in \ref{SpecDenSpher} and \ref{SpecDenMeth}. $P_i^{(2)} (x)$ denotes the associated Legendre polynomial of degree 2 and order i, where $i \in \{0, 1, 2\}$. These have a close link to the 2$^{\text{nd}}$ rank reduced Wigner-d matrix elements, and are commonly used in their place in the literature:
+\begin{equation}
+\begin{split}
+&P_0^{(2)}(\cos \beta) = \frac{1}{2}\left( 3 \cos^2 \beta -1 \right) = d_{0,0}^{2} (\beta) \\
+&P_1^{(2)}(\cos \beta) = -3\cos \beta \sin \beta = - \sqrt{6} d_{0,1}^{(2)}(\beta) = \sqrt{6} d_{0,-1}^{(2)}(\beta) \\
+&P_2^{(2)}(\cos \beta) = 3\sin^2 \beta = \sqrt{6} d_{0,2}^{(2)}(\beta) = \sqrt{6} d_{0,-2}^{(2)}(\beta)
+\end{split}
+\end{equation}\\
+ $\beta$ is the angle between the methyl threefold rotation axis, and the $^{13}$C-$^1$H bond vectors (set to be $\ang{109.47}$ in all calculations conducted in this thesis).
+\section{Diffusive/Woessner Models (Plots i. and ii.)}
+\footnotesize
+\begin{equation*}
+\begin{split}
+\Gamma_{2,S}^{\alpha\alpha\alpha}&=d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2\bigg[\frac{1}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{3}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{3}{40}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2\bigg[\frac{9}{320}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{27}{320}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{27}{160}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_0^{(2)}(\cos\beta)^2\bigg[\frac{9}{5}J(\tau_{\text{c}},0)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{27}{20}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{9}{10}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}c_{\text{S}}P_0^{(2)}(\cos\beta)\bigg[-\frac{4}{5}J\left(\tau_{\text{c}},0\right)-\frac{3}{5}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{II}}^2\bigg[\frac{27}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{27}{20}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},2\omega_{\text{I}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},2\omega_{\text{I}}\right)\bigg] \\
+&\hspace{4pt}- \frac{3}{20} d_{\text{II}}c_{\text{I}}P_2^{(2)}(\cos\beta) J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)+ \frac{3}{5} d_{\text{II}}c_{\text{I}}P_0^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{4pt}+\frac{1}{60} c_{\text{I}}^2P_2^{(2)}(\cos\beta)^2 J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)+\frac{3}{80} c_{\text{I}}^2P_1^{(2)}(\cos\beta)^2 J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}\right) \\
+&\hspace{4pt}+\frac{1}{5} c_{\text{I}}^2P_0^{(2)}(\cos\beta)^2J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+c_{\text{S}}^2\bigg[\frac{4}{45}J\left(\tau_{\text{c}},0\right)+\frac{1}{15}J(\tau_{\text{c}},\omega_{\text{S}})\bigg] \\
+&\hspace{4pt} +\Gamma_{\text{ext}}
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+\Gamma_{2,S}^{\alpha\alpha\beta}&=d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2\bigg[\frac{3}{45}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},0\right) + \frac{1}{20}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{S}}\right) \\
+&\hspace{90pt}+ \frac{1}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{3}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right) \\
+&\hspace{90pt}+\frac{3}{40}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2\bigg[\frac{3}{20}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},0\right)+ \frac{9}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{S}}\right) + \frac{9}{320}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}-\omega_{\text{S}}\right)\\
+&\hspace{90pt} +\frac{27}{320}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}\right) +\frac{27}{160}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_0^{(2)}(\cos\beta)^2\bigg[\frac{1}{5}J(\tau_{\text{c}},0)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{9}{10}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}c_{\text{S}}P_0^{(2)}(\cos\beta)\bigg[-\frac{4}{15}J\left(\tau_{\text{c}},0\right)-\frac{1}{5}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{II}}^2\bigg[\frac{63}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{9}{20}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},2\omega_{\text{I}}\right)+\frac{3}{20}J\left(\tau_{\text{c}},2\omega_{\text{I}}\right)\bigg] \\
+&\hspace{4pt}- \frac{1}{20} d_{\text{II}}c_{\text{I}}P_2^{(2)}(\cos\beta) J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)+ \frac{1}{5} d_{\text{II}}c_{\text{I}}P_0^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{4pt}+\frac{1}{60} c_{\text{I}}^2P_2^{(2)}(\cos\beta)^2 J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)+\frac{3}{80} c_{\text{I}}^2P_1^{(2)}(\cos\beta)^2 J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}\right) \\
+&\hspace{4pt}+\frac{1}{5} c_{\text{I}}^2P_0^{(2)}(\cos\beta)^2J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+c_{\text{S}}^2\bigg[\frac{4}{45}J\left(\tau_{\text{c}},0\right)+\frac{1}{15}J(\tau_{\text{c}},\omega_{\text{S}})\bigg]\\
+&\hspace{4pt} +\Gamma_{\text{ext}}
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+\Gamma_{2,S}^{\alpha\beta\beta}&=d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2\bigg[\frac{3}{45}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},0\right) + \frac{1}{20}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{S}}\right) \\
+&\hspace{90pt}+ \frac{1}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{3}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right) \\
+&\hspace{90pt}+\frac{3}{40}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2\bigg[\frac{3}{20}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},0\right)+ \frac{9}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{S}}\right) + \frac{9}{320}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}-\omega_{\text{S}}\right)\\
+&\hspace{90pt} +\frac{27}{320}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}\right) +\frac{27}{160}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_0^{(2)}(\cos\beta)^2\bigg[\frac{1}{5}J(\tau_{\text{c}},0)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{9}{10}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}c_{\text{S}}P_0^{(2)}(\cos\beta)\bigg[\frac{4}{15}J\left(\tau_{\text{c}},0\right)+\frac{1}{5}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{II}}^2\bigg[\frac{63}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{9}{20}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},2\omega_{\text{I}}\right)+\frac{3}{20}J\left(\tau_{\text{c}},2\omega_{\text{I}}\right)\bigg] \\
+&\hspace{4pt}+ \frac{1}{20} d_{\text{II}}c_{\text{I}}P_2^{(2)}(\cos\beta) J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)- \frac{1}{5} d_{\text{II}}c_{\text{I}}P_0^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{4pt}+\frac{1}{60} c_{\text{I}}^2P_2^{(2)}(\cos\beta)^2 J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)+\frac{3}{80} c_{\text{I}}^2P_1^{(2)}(\cos\beta)^2 J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}\right) \\
+&\hspace{4pt}+\frac{1}{5} c_{\text{I}}^2P_0^{(2)}(\cos\beta)^2J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+c_{\text{S}}^2\bigg[\frac{4}{45}J\left(\tau_{\text{c}},0\right)+\frac{1}{15}J(\tau_{\text{c}},\omega_{\text{S}})\bigg]\\
+&\hspace{4pt} +\Gamma_{\text{ext}}
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+\Gamma_{2,S}^{\beta\beta\beta}&=d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2\bigg[\frac{1}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{3}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{3}{40}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2\bigg[\frac{9}{320}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{27}{320}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{27}{160}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_0^{(2)}(\cos\beta)^2\bigg[\frac{9}{5}J(\tau_{\text{c}},0)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{27}{20}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{9}{10}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}c_{\text{S}}P_0^{(2)}(\cos\beta)\bigg[\frac{4}{5}J\left(\tau_{\text{c}},0\right)+\frac{3}{5}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{II}}^2\bigg[\frac{27}{80}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{27}{20}J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},2\omega_{\text{I}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},2\omega_{\text{I}}\right)\bigg] \\
+&\hspace{4pt}+ \frac{3}{20} d_{\text{II}}c_{\text{I}}P_2^{(2)}(\cos\beta) J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)- \frac{3}{5} d_{\text{II}}c_{\text{I}}P_0^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{4pt}+\frac{1}{60} c_{\text{I}}^2P_2^{(2)}(\cos\beta)^2 J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+k_{\text{DW}}^2\tau_{\text{c}}},\omega_{\text{I}}\right)+\frac{3}{80} c_{\text{I}}^2P_1^{(2)}(\cos\beta)^2 J\left(\frac{\tau_{\text{c}}\tau_{\text{m}}}{\tau_{\text{m}}+\tau_{\text{c}}},\omega_{\text{I}}\right) \\
+&\hspace{4pt}+\frac{1}{5} c_{\text{I}}^2P_0^{(2)}(\cos\beta)^2J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+c_{\text{S}}^2\bigg[\frac{4}{45}J\left(\tau_{\text{c}},0\right)+\frac{1}{15}J(\tau_{\text{c}},\omega_{\text{S}})\bigg] \\
+&\hspace{4pt} +\Gamma_{\text{ext}}
+\end{split}
+\end{equation*}
+where $k_{\text{DW}} = 1$ for the Woessner model, and $k_{\text{DW}} = 2$ for the diffusive model. $\Gamma_{\text{ext}}$ is given in \ref{External}. \\
+\section{Spherical Isotropic Motion (Plot iii.)}
+\begin{equation*}
+\begin{split}
+\Gamma_{2,S}^{\alpha\alpha\alpha}&=d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2\bigg[\frac{1}{80}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{3}{80}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) +\frac{3}{40}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2\bigg[\frac{9}{320}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{27}{320}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{27}{160}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_0^{(2)}(\cos\beta)^2\bigg[\frac{9}{5}J(\tau_{\text{c}},0)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{27}{20}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{9}{10}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}c_{\text{S}}P_0^{(2)}(\cos\beta)\bigg[-\frac{4}{5}J\left(\tau_{\text{c}},0\right)-\frac{3}{5}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{II}}^2\bigg[\frac{63}{80}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+ \frac{9}{5}J\left(\tau_{\text{c}},2\omega_{\text{I}}\right)\bigg] \\
+&\hspace{4pt}- \frac{9}{20} d_{\text{II}}c_{\text{I}}P_2^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+ \frac{3}{5} d_{\text{II}}c_{\text{I}}P_0^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{4pt}+\frac{1}{60} c_{\text{I}}^2P_2^{(2)}(\cos\beta)^2 J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{3}{80} c_{\text{I}}^2P_1^{(2)}(\cos\beta)^2 J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\
+&\hspace{4pt}+\frac{1}{5} c_{\text{I}}^2P_0^{(2)}(\cos\beta)^2J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+c_{\text{S}}^2\bigg[\frac{4}{45}J\left(\tau_{\text{c}},0\right)+\frac{1}{15}J(\tau_{\text{c}},\omega_{\text{S}})\bigg] \\
+&\hspace{4pt} +\Gamma_{\text{ext}}
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+\Gamma_{2,S}^{\alpha\alpha\beta}&=d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2\bigg[\frac{3}{45}J\left(\tau_{\text{c}},0\right) + \frac{1}{20}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)
++ \frac{1}{80}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)\\
+&\hspace{90pt}+\frac{3}{80}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{3}{40}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2\bigg[\frac{3}{20}J\left(\tau_{\text{c}},0\right)+ \frac{9}{80}J\left(\tau_{\text{c}},\omega_{\text{S}}\right) + \frac{9}{320}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)\\
+&\hspace{90pt} +\frac{27}{320}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) +\frac{27}{160}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_0^{(2)}(\cos\beta)^2\bigg[\frac{1}{5}J(\tau_{\text{c}},0)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{9}{10}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}c_{\text{S}}P_0^{(2)}(\cos\beta)\bigg[-\frac{4}{15}J\left(\tau_{\text{c}},0\right)-\frac{1}{5}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{II}}^2\bigg[+\frac{15}{16}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{3}{5}J\left(\tau_{\text{c}},2\omega_{\text{I}}\right)\bigg] \\
+&\hspace{4pt}- \frac{1}{20} d_{\text{II}}c_{\text{I}}P_2^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+ \frac{1}{5} d_{\text{II}}c_{\text{I}}P_0^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{4pt}+\frac{1}{60} c_{\text{I}}^2P_2^{(2)}(\cos\beta)^2 J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{3}{80} c_{\text{I}}^2P_1^{(2)}(\cos\beta)^2 J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\
+&\hspace{4pt}+\frac{1}{5} c_{\text{I}}^2P_0^{(2)}(\cos\beta)^2J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+c_{\text{S}}^2\bigg[\frac{4}{45}J\left(\tau_{\text{c}},0\right)+\frac{1}{15}J(\tau_{\text{c}},\omega_{\text{S}})\bigg]\\
+&\hspace{4pt} +\Gamma_{\text{ext}}
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+\Gamma_{2,S}^{\alpha\beta\beta}&=d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2\bigg[\frac{3}{45}J\left(\tau_{\text{c}},0\right) + \frac{1}{20}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)
++ \frac{1}{80}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)\\
+&\hspace{90pt}+\frac{3}{80}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{3}{40}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2\bigg[\frac{3}{20}J\left(\tau_{\text{c}},0\right)+ \frac{9}{80}J\left(\tau_{\text{c}},\omega_{\text{S}}\right) + \frac{9}{320}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)\\
+&\hspace{90pt} +\frac{27}{320}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) +\frac{27}{160}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_0^{(2)}(\cos\beta)^2\bigg[\frac{1}{5}J(\tau_{\text{c}},0)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{9}{10}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}c_{\text{S}}P_0^{(2)}(\cos\beta)\bigg[\frac{4}{15}J\left(\tau_{\text{c}},0\right)+\frac{1}{5}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{II}}^2\bigg[+\frac{15}{16}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{3}{5}J\left(\tau_{\text{c}},2\omega_{\text{I}}\right)\bigg] \\
+&\hspace{4pt}+ \frac{1}{20} d_{\text{II}}c_{\text{I}}P_2^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right)- \frac{1}{5} d_{\text{II}}c_{\text{I}}P_0^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{4pt}+\frac{1}{60} c_{\text{I}}^2P_2^{(2)}(\cos\beta)^2 J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{3}{80} c_{\text{I}}^2P_1^{(2)}(\cos\beta)^2 J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\
+&\hspace{4pt}+\frac{1}{5} c_{\text{I}}^2P_0^{(2)}(\cos\beta)^2J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+c_{\text{S}}^2\bigg[\frac{4}{45}J\left(\tau_{\text{c}},0\right)+\frac{1}{15}J(\tau_{\text{c}},\omega_{\text{S}})\bigg]\\
+&\hspace{4pt} +\Gamma_{\text{ext}}
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+\Gamma_{2,S}^{\beta\beta\beta}&=d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2\bigg[\frac{1}{80}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{3}{80}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) +\frac{3}{40}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2\bigg[\frac{9}{320}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{27}{320}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{27}{160}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}^2P_0^{(2)}(\cos\beta)^2\bigg[\frac{9}{5}J(\tau_{\text{c}},0)+\frac{3}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}-\omega_{\text{S}}\right)+\frac{27}{20}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)+\frac{9}{20}J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{90pt}+\frac{9}{10}J\left(\tau_{\text{c}},\omega_{\text{I}}+\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{IS}}c_{\text{S}}P_0^{(2)}(\cos\beta)\bigg[\frac{4}{5}J\left(\tau_{\text{c}},0\right)+\frac{3}{5}J\left(\tau_{\text{c}},\omega_{\text{S}}\right)\bigg] \\
+&\hspace{4pt}+d_{\text{II}}^2\bigg[\frac{63}{80}J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+ \frac{9}{5}J\left(\tau_{\text{c}},2\omega_{\text{I}}\right)\bigg] \\
+&\hspace{4pt}+ \frac{9}{20} d_{\text{II}}c_{\text{I}}P_2^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right)- \frac{3}{5} d_{\text{II}}c_{\text{I}}P_0^{(2)}(\cos\beta) J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\ 
+&\hspace{4pt}+\frac{1}{60} c_{\text{I}}^2P_2^{(2)}(\cos\beta)^2 J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+\frac{3}{80} c_{\text{I}}^2P_1^{(2)}(\cos\beta)^2 J\left(\tau_{\text{c}},\omega_{\text{I}}\right) \\
+&\hspace{4pt}+\frac{1}{5} c_{\text{I}}^2P_0^{(2)}(\cos\beta)^2J\left(\tau_{\text{c}},\omega_{\text{I}}\right)+c_{\text{S}}^2\bigg[\frac{4}{45}J\left(\tau_{\text{c}},0\right)+\frac{1}{15}J(\tau_{\text{c}},\omega_{\text{S}})\bigg] \\
+&\hspace{4pt} +\Gamma_{\text{ext}}
+\end{split}
+\end{equation*}
+\section{Ollerenshaw et al. (Plot iv.)}
+\begin{equation*}
+\Gamma_{2,S}^{\alpha\alpha\alpha} = \Gamma_{2,S}^{\beta\beta\beta} = \frac{1}{5} d_{\text{IS}}^2 S_{\text{axis}}^2 \tau_{\text{c}} + \Gamma_{\text{ext}}
+\end{equation*}
+\begin{equation*}
+\Gamma_{2,S}^{\alpha\alpha\beta} = \Gamma_{2,S}^{\alpha\beta\beta} = \frac{1}{45} d_{\text{IS}}^2 S_{\text{axis}}^2 \tau_{\text{c}} + \Gamma_{\text{ext}}
+\end{equation*}
+where $\Gamma_{\text{ext}} = \frac{3\tau_{\text{c}}}{20}\sum\limits_i d_{\text{II},i}$
+\section{Hansen et al. (Plot v.)}
+\begin{equation*}
+\begin{split}
+&\Gamma_{2,S}^{\alpha\alpha\alpha} = \frac{1}{20}\left(\frac{2}{3}c_{\text{S}}-3d_{\text{IS}}P_0^{(2)}(\cos\beta)\right)^2\left(4J(0)+3J(\omega_{\text{S}})\right) \\
+&\hspace{41pt}+ \left(\frac{1}{2}d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2+\frac{1}{8}d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2+\frac{27}{16}d_{\text{II}}^2\right)\tau_{\text{m}}
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+&\Gamma_{2,S}^{\alpha\alpha\beta} = \frac{1}{20}\left(\frac{2}{3}c_{\text{S}}-d_{\text{IS}}P_0^{(2)}(\cos\beta)\right)^2\left(4J(0)+3J(\omega_{\text{S}})\right) \\
+&\hspace{41pt}+ \left(\frac{29}{30}d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2+\frac{29}{120}d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2+\frac{99}{80}d_{\text{II}}^2\right)\tau_{\text{m}}
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+&\Gamma_{2,S}^{\alpha\beta\beta} = \frac{1}{20}\left(\frac{2}{3}c_{\text{S}}+d_{\text{IS}}P_0^{(2)}(\cos\beta)\right)^2\left(4J(0)+3J(\omega_{\text{S}})\right) \\
+&\hspace{41pt}+ \left(\frac{29}{30}d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2+\frac{29}{120}d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2+\frac{99}{80}d_{\text{II}}^2\right)\tau_{\text{m}}
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+&\Gamma_{2,S}^{\beta\beta\beta} = \frac{1}{20}\left(\frac{2}{3}c_{\text{S}}+3d_{\text{IS}}P_0^{(2)}(\cos\beta)\right)^2\left(4J(0)+3J(\omega_{\text{S}})\right) \\
+&\hspace{41pt}+ \left(\frac{1}{2}d_{\text{IS}}^2P_1^{(2)}(\cos\beta)^2+\frac{1}{8}d_{\text{IS}}^2P_2^{(2)}(\cos\beta)^2+\frac{27}{16}d_{\text{II}}^2\right)\tau_{\text{m}}
+\end{split}
+\end{equation*}
+where the spectral density function, $J(\omega)$ is defined by:
+\begin{equation*}
+\begin{split}
+&J(\omega)=S_{\text{axis}}^2\frac{\tau_{\text{c}}}{1+\omega^2\tau_{\text{c}}^2}+(1-S_{\text{axis}}^2)\frac{\tau_1}{1+\omega^2\tau_1^2}, \\
+&\frac{1}{\tau_1}=\frac{1}{\tau_{\text{c}}}+\frac{1}{\tau_{\text{axis}}}
+\end{split}
+\end{equation*}
+\begin{singlespacing}
+\printappendixbibliography
+\end{singlespacing}
+\end{appendixtext}

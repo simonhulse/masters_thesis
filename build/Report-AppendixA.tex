@@ -1,0 +1,144 @@
+% !TeX root = ./Report-Body.tex
+\chapter{Bloch-Redfield-Wangsness Theory}
+
+\begin{appendixtext}
+In this appendix, I present a derivation of the relaxation superoperator, $\hat{\hat{\Gamma}}$, using BWR theory. First,  a general approach to time-dependent perturbation theory is considered, which is subsequently applied to the specific case of an ensemble of systems, each described by a density matrix, $\hat{\rho}$. The approach I adopt in section \ref{secA.2} follows closely to previous accounts, such as those given by Goldman and Palmer$^{\text{[1,2]}}$\\
+\section{Second order perturbation theory} \label{secA.1}
+The Schr\"{o}dinger Equation involving a time-dependent Hamiltonian is given by:
+\begin{equation}
+\label{eqA.1}
+\pdv{\ket{\psi(t)}}{t}=-i\hat{H}(t)\ket{\psi(t)}
+\end{equation}
+Expressing this in integrated form:
+\begin{equation}
+\label{eqA.2}
+\ket{\psi(t)}=\ket{\psi(0)}-i\int_0^t \hat{H}(t^{\prime})\ket{\psi(t^{\prime})} dt^{\prime}
+\end{equation}
+Inputting the result of \ref{eqA.2} into the right-hand side of \ref{eqA.1} leads to the following expression:
+\begin{equation}
+\label{eqA.3}
+\pdv{\ket{\psi(t)}}{t}=-i\hat{H}(t)\left[\ket{\psi(0)}-i\int_0^t \hat{H}(t^{\prime})\ket{\psi(t^{\prime})} \right]dt^{\prime}
+\end{equation}
+Integrating again obtains:
+\begin{equation}
+\label{eqA.4}
+\ket{\psi(t)}=\ket{\psi(0)}-i\ket{\psi(0)}\int_0^t \hat{H}(t^{\prime}) dt^{\prime}-\int_0^t \hat{H}(t^{\prime}) \int_0^{t^{\prime}}\hat{H}(t^{\prime\prime})\ket{\psi(t^{\prime\prime})} dt^{\prime\prime} dt^{\prime}
+\end{equation}
+If we continue to repeat this procedure of inserting into \ref{eqA.1} and integrating, we arrive at:
+\begin{equation}
+\label{eqA.5}
+\begin{split}
+&\ket{\psi(t)}=\left[\sum\limits_{n=0}^\infty \hat{I}_n(t)\right]\ket{\psi(0)} \\
+&\hat{I}_n(t)=(-i)^n\int_0^t dt^{\prime}\int_0^{t^{\prime}} dt^{\prime\prime}...\int_0^{t^{{(n-1)}^{\prime}}} dt^{n^{\prime}}\hat{H}(t^{\prime})\hat{H}(t^{\prime\prime})...\hat{H}(t^{n^{\prime}})
+\end{split}
+\end{equation} 
+The essence of second order perturbation theory is to truncate this expression, removing any terms of order higher than 2, such that:
+\begin{equation}
+\label{eqA.6}
+\ket{\psi(t)}=\left[1-i\int_0^t \hat{H}(t^{\prime}) dt^{\prime}-\int_0^t  \int_0^{t^{\prime}} \hat{H}(t^{\prime})\hat{H}(t^{\prime\prime}) dt^{\prime\prime} dt^{\prime}\right]\ket{\psi(0)}
+\end{equation}
+
+\section{Derivation of the relaxation superoperator} \label{secA.2}
+Now we will apply the result obtained above to the Liouville-von Neumann equation, which describes the evolution of the density matrix $\hat{\rho}(t)$ in Liouville space:
+\begin{equation}
+\label{eqA.7}
+\pdv{\hat{\rho}(t)}{t}=-i\hat{\hat{H}}(t)\hat{\rho}(t)
+\end{equation}
+where $\hat{\hat{H}}(t)$ is the commutation superoperator of $\hat{H}(t)$:
+\begin{equation}
+\label{eqA.8}
+\hat{\hat{H}}(t)=\comm{\hat{H}(t)}{}
+\end{equation} 
+To proceed, we split $\hat{\hat{H}}(t)$ two parts. The first, $\hat{\hat{H}}_0$ contains all the static, time independent components of the Hamiltonian. For our purposes, this will include contributions such Zeeman interaction, isotropic chemical shift, scalar coupling, and so on. The second term, $\hat{\hat{H}}_1(t)$, contains all the stochastic time dependent terms, which arise due to molecular motion. Anisotropic contributions, such as those from the dipolar interaction and chemical shift anisotropy will be contained within this.
+Hence the Liouville-von Neumann equation becomes
+\begin{equation}
+\label{eqA.9}
+\pdv{\hat{\rho}(t)}{t}=-i\left[\hat{\hat{H}}_0+\hat{\hat{H}}_1(t)\right]\hat{\rho}(t)
+\end{equation}
+The form $\hat{\hat{H}}_1 (t)$ takes is that of randomly fluctuating noise, which is not reproducible nor differentiable. We therefore wish to seek an expression not explicitly in terms of $\hat{\hat{H}}_1 (t)$, but instead in terms of it's statistical properties, which are well defined. It therefore seems natural to proceed using the perturbation theory derived in the previous section.\\
+There many assumptions used in this derivation, some of which are as follows:
+\begin{itemize}
+\item The noise is assumed to be stationary, i.e. it may well vary randomly with time, but it's statistical properties do not depend on the time point being considered
+\item The ensemble average of $\hat{\hat{H}}_1 (t)$ is zero. i.e: $\overline{\hat{\hat{H}}_1 (t)}=0$.
+\item $\norm{\hat{\hat{H}}_1(t)}\ll\norm{\hat{\hat{H}}_0}$, i.e the relative "size" of $\hat{\hat{H}}_1(t)$ is small compared with $\hat{\hat{H}}_0$. This is a necessity for the perturbation theory to be valid.
+\end{itemize}
+Before applying perturbation theory to \ref{eqA.9}, we shall change the reference frame, to one called the interaction frame with respect to $\hat{H}_0$, which is achieved as follows:
+\begin{equation}
+\label{eqA.10}
+\hat{\rho}^I(t)=e^{i\hat{\hat{H}}_0t}\hat{\rho}(t)\quad\text{and}\quad\hat{\hat{H}}_1^I(t)=e^{i\hat{\hat{H}}_0t}\hat{\hat{H}}_1(t)e^{-i\hat{\hat{H}}_0t}
+\end{equation}
+we can utilise \ref{eqA.9} to derive the following expression for the time evolution of the density matrix in the interaction frame:
+\begin{equation}
+\label{eqA.11}
+\pdv{\hat{\rho}^I(t)}{t}=-i\hat{\hat{H}}_1^I(t)\hat{\rho}^I(t)
+\end{equation}
+where the superscript $I$ refers to said interaction frame. \\
+It should be noted that the influence of $\hat{\hat{H}}_0$ has vanished; this has been incorporated into the definition of the density matrix. This transformation gets rid of the very large contribution from $\hat{\hat{H}}_0$, allowing consideration of longer time scales than would be the case without such a transformation. \\
+Applying seond order perturbation theory to \ref{eqA.11} results in the following expression:
+\begin{equation}
+\label{eqA.12}
+\pdv{\hat{\rho}^I(t)}{t}=-i\hat{\hat{H}}_1^I(t)\hat{\rho}^I(0)-\int_0^t \hat{\hat{H}}_1^I(t)\hat{\hat{H}}_1^I(t^{\prime})\hat{\rho}^I(t^{\prime}) dt^{\prime}
+\end{equation}
+Applying an ensemble average to the expression:
+\begin{equation}
+\label{eqA.13}
+\pdv{\overline{\hat{\rho}^I(t)}}{t}=-i\overline{\hat{\hat{H}}_1^I(t)\hat{\rho}^I(0)}-\int_0^t \overline{\hat{\hat{H}}_1^I(t)\hat{\hat{H}}_1^I(t^{\prime})\hat{\rho}^I(t^{\prime})} dt^{\prime}
+\end{equation}
+Recall from one of the assumptions above, that $\overline{\hat{\hat{H}}_1(t)}=0$. Using the definition of $\hat{\hat{H}}_1^I(t)$ in \ref{eqA.10}, and noting that $\hat{\hat{H}}_0$ is time independent, we find:
+\begin{equation}
+\label{eqA.14}
+\overline{\hat{\hat{H}}_1^I(t)}=\overline{e^{i\hat{\hat{H}}_0t}\hat{\hat{H}}_1(t)e^{-i\hat{\hat{H}}_0t}}=e^{i\hat{\hat{H}}_0t}\overline{\hat{\hat{H}}_1(t)}e^{-i\hat{\hat{H}}_0t}=0
+\end{equation}
+Hence, the first term of the left-hand side of \ref{eqA.14} vanishes, leaving us with:
+\begin{equation}
+\label{eqA.15}
+\pdv{\overline{\hat{\rho}^I(t)}}{t}=-\int_0^t \overline{\hat{\hat{H}}_1^I(t)\hat{\hat{H}}_1^I(t^{\prime})\hat{\rho}^I(t^{\prime})} dt^{\prime}
+\end{equation}
+Introducing a new time variable, $\tau = t - t^{\prime}$, the expression becomes:
+\begin{equation}
+\label{eqA.16}
+\pdv{\overline{\hat{\rho}^I(t)}}{t}=-\int_0^t \overline{\hat{\hat{H}}_1^I(t)\hat{\hat{H}}_1^I(t - \tau)\hat{\rho}^I(t - \tau)} d \tau
+\end{equation}
+Another assumption that made is that the fluctuation of the random perturbation is rapid in comparison to the rate by which the physical quantity involved relaxes. If this is the case, $\hat{\rho}^I(t - \tau)$ will evolve negligibly during the time period of interest, such that it can be replaced with $\hat{\rho}^I(t)$. As well as this, it permits us to extend the upper limit of the integral to infinity to a very good approximation:
+\begin{equation}
+\label{eqA.17}
+\pdv{\overline{\hat{\rho}^I(t)}}{t}=-\int \limits_0^{\infty} \overline{\hat{\hat{H}}_1^I(t)\hat{\hat{H}}_1^I(t - \tau) \hat{\rho}^I(t)} d \tau 
+\end{equation}
+It is assumed that the dynamics of the spin system are not well correlated with the stochastic noise in $\hat{\hat{H}}_1(t)$, allowing \ref{eqA.17} to be rewritten as:
+\begin{equation}
+\label{eqA.18}
+\pdv{\overline{\hat{\rho}^I(t)}}{t} =-\int \limits_0^{\infty} \overline{\hat{\hat{H}}_1^I(t)\hat{\hat{H}}_1^I(t - \tau)} \overline{\hat{\rho}^I(t)} d \tau  \\
+\end{equation}
+We now return back to the interaction frame, noting the definitions in \ref{eqA.10}:
+\begin{equation}
+\label{eqA.19}
+\begin{split}
+&\pdv{\overline{e^{i \hat{\hat{H}}_0 t} \hat{\rho}(t)}}{t} = -\int \limits_0^{\infty} \overline{e^{i \hat{\hat{H}}_0 t} \hat{\hat{H}}_1(t) e^{-i \hat{\hat{H}}_0 t} e^{i \hat{\hat{H}}_0 t} e^{-i \hat{\hat{H}}_0 \tau} \hat{\hat{H}}_1(t - \tau) e^{-i \hat{\hat{H}}_0 t} e^{i \hat{\hat{H}}_0 \tau}} \overline{e^{i \hat{\hat{H}}_0 t} \hat{\rho}(t)} d \tau \\
+&e^{i \hat{\hat{H}}_0 t} \pdv{\overline{\hat{\rho} (t)}}{t} + \pdv{e^{i \hat{\hat{H}}_0 t}}{t} \overline{\hat{\rho} (t)} = -\int \limits_0^{\infty} \overline{e^{i \hat{\hat{H}}_0 t} \hat{\hat{H}}_1(t) e^{-i \hat{\hat{H}}_0 \tau} \hat{\hat{H}}_1(t - \tau) e^{i \hat{\hat{H}}_0 \tau}} \overline{\hat{\rho}(t)} d \tau \\
+&e^{i \hat{\hat{H}}_0 t} \pdv{\overline{\hat{\rho} (t)}}{t} + i \hat{\hat{H}}_0 e^{i \hat{\hat{H}}_0 t} \overline{\hat{\rho} (t)} = -\int \limits_0^{\infty} \overline{e^{i \hat{\hat{H}}_0 t} \hat{\hat{H}}_1(t) e^{-i \hat{\hat{H}}_0 \tau} \hat{\hat{H}}_1(t - \tau) e^{i \hat{\hat{H}}_0 \tau}} \overline{\hat{\rho}(t)} d \tau \\
+&\pdv{\overline{\hat{\rho} (t)}}{t} = -i \hat{\hat{H}}_0 \overline{\hat{\rho} (t)} -\int \limits_0^{\infty} \overline{\hat{\hat{H}}_1(t) e^{-i \hat{\hat{H}}_0 \tau} \hat{\hat{H}}_1(t - \tau) e^{i \hat{\hat{H}}_0 \tau}} \overline{\hat{\rho}(t)} d \tau
+\end{split}
+\end{equation}
+The over-bars denoting an ensemble average for $\hat{\rho} (t)$ will be dropped from now on for convenience, but note they are still implied. \\
+By hermiticity, $\hat{H}_1 (t) = \hat{H}_1^{\dagger} (t)$. It will become convenient to replace $\hat{H}_1 (t)$ with $\hat{H}_1^{\dagger} (t)$, for ease of calculating relaxation rates. Therefore, this expression is often written in the following form:
+\begin{equation}
+\label{eqA.20}
+\begin{split}
+&\pdv{\hat{\rho} (t)}{t} = -i \hat{\hat{H}}_0\hat{\rho} (t) - \hat{\hat{\Gamma}} \hat{\rho} (t) \\
+&\hat{\hat{\Gamma}} = \int \limits_0^{\infty} \overline{\comm{\hat{H}_1^{\dagger} (t)}{\comm{e^{-i \hat{H}_0 \tau} \hat{H}_1(t - \tau) e^{i \hat{H}_0 \tau}}{}}} d \tau
+\end{split}
+\end{equation}
+where $\hat{\hat{\Gamma}}$ is the relaxation superoperator. This expression has a major flaw, in that over long time periods, the system does not relax back to its true equilibrium position, but rather to $\hat{\rho}=0$. This can be corrected phenomenologically by simply replacing $\hat{\rho}(t)$ with $\hat{\rho}(t)-\hat{\rho}_{\text{eq}}$: 
+\begin{equation}
+\label{eqA.21}
+\pdv{\hat{\rho} (t)}{t} = -i \hat{\hat{H}}_0 \hat{\rho} (t) - \hat{\hat{\Gamma}} \left(\hat{\rho} (t) - \hat{\rho}_{\text{eq}} \right)
+\end{equation}
+Of course this is not a well justified approach, but a correct expression can be derived by applying a fully quantum treatment to the lattice. Such an approach is outlined by Goldman.\\ 
+
+\small
+\noindent
+{[1]}\quad Cavanagh, W. J. Fairbrother, I. I. I. A. G. Palmer, N. J. Skelton, M. Rance, \textit{Protein}\\
+\textit{\null\hspace{20pt} NMR Spectroscopy : Principles and Practice}, Elsevier Science, Burlington, \textbf{2010}.\\
+{[2]}\quad M. Goldman, \textit{Journal of Magnetic Resonance} \textbf{2001}, \textit{149}, 160-187.
+\singlespacing
+\end{appendixtext}

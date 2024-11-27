@@ -1,0 +1,12 @@
+% !TeX root = ./Report-Body.tex
+%%% You do not need to edit this file.
+\begingroup%
+\makeatletter\if@tightbibliography%
+\let\normalsize\footnotesize%
+\singlespacing%
+\fi%
+\chapter*{\bibname}%
+%\phantomsection%
+\addcontentsline{toc}{chapter}{\bibname}%
+\printbibliography[segment=0,resetnumbers=true,heading={mainbib}]%
+\endgroup%

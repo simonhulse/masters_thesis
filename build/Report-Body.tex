@@ -1,0 +1,85 @@
+% build/Report-Body.tex
+% Simon Hulse
+% simonhulse@protonmail.com
+% Last Edited: Wed 27 Nov 2024 03:05:28 PM EST
+
+\documentclass[final,%
+               twoside,%
+               openany,%
+               tightbibliography,%
+               dontusefourier,%
+               thawtoc,%
+               doublespace]{oxchempartii-report}
+\raggedbottom
+
+\DeclareSIUnit{\myhertz}{Hz}
+
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+\let\epsilon\varepsilon
+%%% Data for title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{An Investigation of Relaxation Phenomena in I$_3$S Nuclear Spin Systems}
+\subtitle{Analysing the Feasibility of a $^{13}$CF$_3$ TROSY Experiment}
+\author{Simon Hulse}
+\college{Jesus College}
+\typeofdocument{A thesis submitted for the\\ Honour School of Chemistry:\\ Chemistry Part II, 2019}
+\date{14 June 2019}% Defaults to \today if left empty.
+\institution{Physical and Theoretical Chemistry Laboratory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetikzlibrary{patterns}
+\makeatletter
+\let\thetitle\@title
+\let\thesubtitle\@subtitle
+\let\theauthor\@author
+\let\thecollege\@college
+\let\thedate\@date
+\makeatother
+
+\allowdisplaybreaks
+
+
+\begin{document}
+% This line silences errors where both the summary and your real start
+% are both numbered from one, and laTeX doesn't know where to hyperlink
+\hypersetup{pageanchor=false}
+\frontmatter
+\makeoxtitle{./Other/OxfordCrest.eps}
+
+\let\cleardoublepage\clearpage
+\include{Report-Summary}
+\let\cleardoublepage\clearpage
+\tableofcontents
+
+\let\cleardoublepage\clearpage
+% \include{Report-DeclarationOfAuthorship}
+\include{Report-Acknowledgements}
+\include{Report-Abbreviations}
+\afterpage{\blankpage}
+%%%%%
+\hypersetup{pageanchor=true}
+\mainmatter
+\include{Report-Introduction}
+\include{Report-DerivationofTheory}
+\include{Report-TheoreticalCalculations}
+\include{Report-ExperimentalRelaxationInvestigations}
+\include{Report-ConclusionsFutureWork}
+\include{Report-References}
+\appendix% Comment out if you don't need it.
+\include{Report-AppendixA}% Comment out if you don't need it.
+\include{Report-AppendixB}
+\include{Report-AppendixC}
+
+
+%\include{Report-AppendixPaper}% Uncomment this line and see
+%                              % the instructions in
+%                              % Report-AppendixPaper.tex if
+%                              % you wish to append a paper.
+%%%%%
+% Include the spine only when you are doing the final
+% printing of your thesis
+% \include{Report-Spine}
+\end{document}
